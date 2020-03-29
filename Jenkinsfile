@@ -6,7 +6,7 @@ pipeline {
        
         stage('Build') {
             steps {
-                sh "make "
+                sh "gcc main.cpp -o res.out "
                 echo 'Building..'
                 
             }
@@ -19,6 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh "./res.out"
             }
         }
     }
