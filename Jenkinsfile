@@ -6,7 +6,7 @@ pipeline {
        
         stage('Build') {
             steps {
-                sh "make all"
+                sh "make "
                 echo 'Building..'
                 
             }
